@@ -7,5 +7,4 @@
             <class name="testsWithLoggedInUser.AddMinMaxCostToCart"/>
         </classes>
     </test>
-
 </suite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Login functionality suite">
+    <test name="Login Default">
+        <parameter name="browser" value="default"/>
+        <classes>
+            <class name="loginTests.FailedLoginTest"/>
+            <class name="loginTests.LoginTest"/>
+            <class name="testsWithLoggedInUser.LogoutTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Adding Items to Cart functionality suite">
+    <test name="Various Add to Cart Default">
+        <parameter name="browser" value="default"/>
+        <classes>
+            <class name="testsWithLoggedInUser.AddToCartTest"/>
+            <class name="testsWithLoggedInUser.RemoveFromCartTest"/>
+            <class name="testsWithLoggedInUser.AddRandomItemToCart"/>
+            <class name="testsWithLoggedInUser.AddMinMaxCostToCart"/>
+        </classes>
+    </test>
+</suite>

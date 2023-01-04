@@ -8,6 +8,6 @@ public class AddRandomItemToCart extends BaseLoggedInTest{
     public void addRandomItemToCart() {
         ShopMethods shopMethods = new ShopMethods(driver);
         shopMethods.performRandomAddToCart();
-        shopMethods.addRandomToCartCheck("1"); // 1 because we expect one item in cart
+        shopMethods.addRandomToCartCheck("1");
     }
 }

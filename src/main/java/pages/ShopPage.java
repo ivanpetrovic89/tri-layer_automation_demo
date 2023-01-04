@@ -35,11 +35,10 @@ public class ShopPage extends BasePage{
         clickElement(navigateToCartButtonBy);
     }
 
-
-
     public WebElement selectRandomAddToCart(){
         return selectRandomElement(addToCartButtonBy);
     }
+
 
     public String minNameString(){
         return minKeyString(inventoryProductNameBy, dollarSignBy);

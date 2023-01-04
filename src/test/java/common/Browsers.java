@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class Browsers {
     public WebDriver driver;
@@ -17,7 +16,6 @@ public class Browsers {
     public void startFirefox(){
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
-        //TODO vidi kako se startuje maksimiziran prozor u mozili
         driver.manage().window().maximize();
     }
     public void startEdge(){
@@ -26,3 +24,4 @@ public class Browsers {
         driver.manage().window().maximize();
     }
 }
+

@@ -13,6 +13,7 @@ public class LoginMethods extends LoginPage {
         writePassword(password);
         clickLogin();
     }
+
     public void failedLoginCheck(String expectedText){
         LoginPage loginPage = new LoginPage(driver);
         assertStringsEqual(loginPage.readErrorMessage(), expectedText);

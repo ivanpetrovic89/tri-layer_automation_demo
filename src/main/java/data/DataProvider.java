@@ -1,9 +1,6 @@
 package data;
 
-
-import methods.LoginMethods;
 import pages.LoginPage;
-import utilities.PropertyManager;
 
 public class DataProvider {
     @org.testng.annotations.DataProvider(name = "failedLogin")

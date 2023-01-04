@@ -16,6 +16,7 @@ public class ShoppingCartPage extends BasePage{
     public void isItemAddedToCartCheck(){
         isElementDisplayed(ShoppingCartPage.removeButtonBy);
     }
+
     public String readCartNumber(){
         return readText(navigateToCartButtonBy);
     }

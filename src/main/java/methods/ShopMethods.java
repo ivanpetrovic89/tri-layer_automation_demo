@@ -13,8 +13,8 @@ public class ShopMethods extends ShopPage {
         logoutClick();
     }
 
-    public void logoutCheck(String expectedTExt){
-        assertStringsEqual(getValueOfLoginButton(), expectedTExt);
+    public void logoutCheck(String expectedText){
+        assertStringsEqual(getValueOfLoginButton(), expectedText);
     }
 
     public void performAddToCart(){

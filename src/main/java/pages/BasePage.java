@@ -73,15 +73,20 @@ public class BasePage {
         String keyString;
         String valueString;
         double doubleValue;
-        HashMap<String, Double> allTwoElementHashMap = new HashMap<>();
+        HashMap<String, Double> allElementHashMap = new HashMap<>();
         for (int i = 0; i < allElementByOne.size(); i++) {
             keyString = allElementByOne.get(i).getText();
             valueString = allElementByTwo.get(i).getText();
-            valueString = valueString.replaceAll("[^\\d.]", "");
-            doubleValue = Double.parseDouble(valueString);
-            allTwoElementHashMap.put(keyString, doubleValue);
+            doubleValue = stringToDouble(valueString);
+            allElementHashMap.put(keyString, doubleValue);
         }
-        return allTwoElementHashMap;
+        return allElementHashMap;
+    }
+
+    public double stringToDouble(String baseValueString){
+        baseValueString = baseValueString.replaceAll("[^\\d.]", "");
+        double doubleValue = Double.parseDouble(baseValueString);
+        return doubleValue;
     }
 
     public String stringMaker(String baseString, String addString, String target, String replacement){

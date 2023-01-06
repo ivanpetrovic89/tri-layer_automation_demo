@@ -6,7 +6,8 @@ import java.util.Properties;
 
 public class PropertyManager {
     private static PropertyManager instance;
-    private static String url, validUsername, validPassword, invalidUsername, invalidPassword, expectedMaxPrice, expectedMinPrice;
+    private static String url, validUsername, validPassword, invalidUsername, invalidPassword, expectedMaxPrice, expectedMinPrice,
+    validFirstName, validLastName, validZipCode;
 
     public static PropertyManager getInstance(){
         if(instance == null){
@@ -32,6 +33,9 @@ public class PropertyManager {
         invalidPassword = properties.getProperty("invalidPassword");
         expectedMaxPrice = properties.getProperty("expectedMaxPrice");
         expectedMinPrice = properties.getProperty("expectedMinPrice");
+        validFirstName = properties.getProperty("validFirstName");
+        validLastName = properties.getProperty("validLastName");
+        validZipCode = properties.getProperty("validZipCode");
     }
 
     public String getUrl(){
@@ -60,5 +64,17 @@ public class PropertyManager {
 
     public static String getExpectedMinPrice() {
         return expectedMinPrice;
+    }
+
+    public static String getValidFirstName() {
+        return validFirstName;
+    }
+
+    public static String getValidLastName() {
+        return validLastName;
+    }
+
+    public static String getValidZipCode() {
+        return validZipCode;
     }
 }

@@ -12,6 +12,7 @@ public class ShoppingCartPage extends BasePage{
     public static By navigateToCartButtonBy = By.className("shopping_cart_link");
     public String expectedMinPrice = PropertyManager.getExpectedMinPrice();
     public String expectedMaxPrice = PropertyManager.getExpectedMaxPrice();
+    public By checkoutButtonBy = By.id("checkout");
 
     public void isItemAddedToCartCheck(){
         isElementDisplayed(ShoppingCartPage.removeButtonBy);
@@ -19,6 +20,10 @@ public class ShoppingCartPage extends BasePage{
 
     public String readCartNumber(){
         return readText(navigateToCartButtonBy);
+    }
+
+    public void goToCheckout(){
+        clickElement(checkoutButtonBy);
     }
 
 }

@@ -24,4 +24,5 @@ public class ShoppingCartMethods extends ShoppingCartPage {
         assertStringsEqual(shopPage.maxPrice(), expectedMaxPrice);
     }
 
+
 }

@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 import pages.CheckoutCompletePage;
 import pages.OverviewPage;
 
-public class SuccessfulCheckout extends BaseCheckoutTest{
-    @Test(testName = "Successful shopping procedure")
+public class SuccessfulCheckoutTest extends BaseCheckoutTest{
+    @Test(testName = "Successful shopping procedure.")
     public void performShoppingCheckout() {
         CheckoutInformationMethods checkoutInformationMethods = new CheckoutInformationMethods(driver);
         checkoutInformationMethods.performFillingInfo(

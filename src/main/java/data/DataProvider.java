@@ -1,5 +1,7 @@
 package data;
 
+import methods.CheckoutInformationMethods;
+import pages.CheckoutInformationPage;
 import pages.LoginPage;
 
 public class DataProvider {
@@ -15,4 +17,14 @@ public class DataProvider {
         };
     }
 
+    @org.testng.annotations.DataProvider(name = "failedCheckout")
+    public static Object[][] failedCheckoutData(){
+        return new Object[][]{
+                {"", "", "", "Error: First Name is required"},
+                {"", CheckoutInformationPage.validLastName, CheckoutInformationPage.validZipCode, "Error: First Name is required"},
+                {CheckoutInformationPage.validFirstName, "", CheckoutInformationPage.validZipCode, "Error: Last Name is required"},
+                {CheckoutInformationPage.validFirstName, CheckoutInformationPage.validLastName, "", "Error: Postal Code is required"}
+
+        };
+    }
 }

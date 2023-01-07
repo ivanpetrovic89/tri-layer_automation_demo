@@ -14,4 +14,8 @@ public class CheckoutInformationMethods extends CheckoutInformationPage {
         clickContinue();
     }
 
+    public void isCheckoutFailedCheck(String expectedText){
+        assertStringsEqual(readCheckoutErrorMessage(), expectedText);
+    }
+
 }

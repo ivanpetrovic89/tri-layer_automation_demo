@@ -12,10 +12,10 @@ public class CheckoutInformationPage extends BasePage{
     public By lastNameFieldBy = By.id("last-name");
     public By zipCodeFiledBy = By.id("postal-code");
     public By continueButtonBy = By.id("continue");
-    public String validFirstName = PropertyManager.getValidFirstName();
-    public String validLastName = PropertyManager.getValidLastName();
-    public String validZipCode = PropertyManager.getValidZipCode();
-
+    public static String validFirstName = PropertyManager.getValidFirstName();
+    public static String validLastName = PropertyManager.getValidLastName();
+    public static String validZipCode = PropertyManager.getValidZipCode();
+    public By errorCheckoutMessageBy = By.xpath("//div[@class='error-message-container error']");
 
     public void fillFirstName(String firstName){
         writeText(firstNameFieldBy, firstName);
@@ -31,6 +31,10 @@ public class CheckoutInformationPage extends BasePage{
 
     public void clickContinue(){
         clickElement(continueButtonBy);
+    }
+
+    public String readCheckoutErrorMessage(){
+        return readText(errorCheckoutMessageBy);
     }
 
 }

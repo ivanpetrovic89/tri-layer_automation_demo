@@ -11,7 +11,8 @@
             <class name="testsWithLoggedInUser.RemoveFromCartTest"/>
             <class name="testsWithLoggedInUser.AddRandomItemToCart"/>
             <class name="testsWithLoggedInUser.AddMinMaxCostToCart"/>
-            <class name="checkoutTests.SuccessfulCheckout"/>
+            <class name="checkoutTests.SuccessfulCheckoutTest"/>
+            <class name="checkoutTests.FailedCheckoutTest"/>
         </classes>
     </test>
 
@@ -25,7 +26,8 @@
             <class name="testsWithLoggedInUser.RemoveFromCartTest"/>
             <class name="testsWithLoggedInUser.AddRandomItemToCart"/>
             <class name="testsWithLoggedInUser.AddMinMaxCostToCart"/>
-            <class name="checkoutTests.SuccessfulCheckout"/>
+            <class name="checkoutTests.SuccessfulCheckoutTest"/>
+            <class name="checkoutTests.FailedCheckoutTest"/>
         </classes>
     </test>
 
@@ -39,7 +41,8 @@
             <class name="testsWithLoggedInUser.RemoveFromCartTest"/>
             <class name="testsWithLoggedInUser.AddRandomItemToCart"/>
             <class name="testsWithLoggedInUser.AddMinMaxCostToCart"/>
-            <class name="checkoutTests.SuccessfulCheckout"/>
+            <class name="checkoutTests.SuccessfulCheckoutTest"/>
+            <class name="checkoutTests.FailedCheckoutTest"/>
         </classes>
     </test>
 </suite>

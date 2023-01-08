@@ -4,7 +4,7 @@
     <test name="Active in the making">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="checkoutTests.FailedCheckoutTest"/>
+            <class name="testsWithLoggedInUser.AddMinMaxCostToCart"/>
         </classes>
     </test>
 </suite>

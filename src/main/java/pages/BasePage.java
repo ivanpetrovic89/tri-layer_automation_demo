@@ -67,26 +67,21 @@ public class BasePage {
     }
 
 
-    public HashMap<String, Double> twoElementHashMap(By elementByOne, By elementByTwo){
-        List<WebElement> allElementByOne = driver.findElements(elementByOne);
-        List<WebElement> allElementByTwo = driver.findElements(elementByTwo);
+    public HashMap<String, Double> stringDoubleHashMap(By elementForString, By elementForDouble){
+        List<WebElement> allElementByOne = driver.findElements(elementForString);
+        List<WebElement> allElementByTwo = driver.findElements(elementForDouble);
         String keyString;
         String valueString;
         double doubleValue;
-        HashMap<String, Double> allElementHashMap = new HashMap<>();
+        HashMap<String, Double> allStringDoubleHashMap = new HashMap<>();
         for (int i = 0; i < allElementByOne.size(); i++) {
             keyString = allElementByOne.get(i).getText();
             valueString = allElementByTwo.get(i).getText();
-            doubleValue = stringToDouble(valueString);
-            allElementHashMap.put(keyString, doubleValue);
+            valueString = valueString.replaceAll("[^\\d.]", "");
+            doubleValue = Double.parseDouble(valueString);
+            allStringDoubleHashMap.put(keyString, doubleValue);
         }
-        return allElementHashMap;
-    }
-
-    public double stringToDouble(String baseValueString){
-        baseValueString = baseValueString.replaceAll("[^\\d.]", "");
-        double doubleValue = Double.parseDouble(baseValueString);
-        return doubleValue;
+        return allStringDoubleHashMap;
     }
 
     public String stringMaker(String baseString, String addString, String target, String replacement){
@@ -94,30 +89,30 @@ public class BasePage {
         return makingStrings;
     }
 
-    public String minKeyString(By elementByOne, By elementByTwo){
-        return Collections.min(twoElementHashMap(elementByOne, elementByTwo).entrySet(), Map.Entry.comparingByValue()).getKey();
+    public String minKeyString(By elementForString, By elementForDouble){
+        return Collections.min(stringDoubleHashMap(elementForString, elementForDouble).entrySet(), Map.Entry.comparingByValue()).getKey();
     }
     public By minKeyElement(String baseString, String addString, String target, String replacement){
         return By.name(stringMaker(baseString, addString, target, replacement));
     }
 
-    public String maxKeyString(By elementByOne, By elementByTwo){
-    return Collections.max(twoElementHashMap(elementByOne, elementByTwo).entrySet(), Map.Entry.comparingByValue()).getKey();
+    public String maxKeyString(By elementForString, By elementForDouble){
+    return Collections.max(stringDoubleHashMap(elementForString, elementForDouble).entrySet(), Map.Entry.comparingByValue()).getKey();
     }
     public By maxKeyElement(String baseString, String addString, String target, String replacement){
         return By.name(stringMaker(baseString, addString, target, replacement));
     }
 
-    public String minValueDoubleToString(By elementByOne, By elementByTwo){
-        double minValueDouble = Collections.min(twoElementHashMap(elementByOne, elementByTwo).entrySet(), Map.Entry.comparingByValue()).getValue();
+    public String minValueDoubleToString(By elementForString, By elementForDouble){
+        double minValueDouble = Collections.min(stringDoubleHashMap(elementForString, elementForDouble).entrySet(), Map.Entry.comparingByValue()).getValue();
         return Double.toString(minValueDouble);
     }
     public String minValueString(String baseString, String addString, String target, String replacement){
         return stringMaker(baseString, addString, target, replacement);
     }
 
-    public String maxValueDoubleToString(By elementByOne, By elementByTwo){
-        double maxValueDouble = Collections.max(twoElementHashMap(elementByOne, elementByTwo).entrySet(), Map.Entry.comparingByValue()).getValue();
+    public String maxValueDoubleToString(By elementForString, By elementForDouble){
+        double maxValueDouble = Collections.max(stringDoubleHashMap(elementForString, elementForDouble).entrySet(), Map.Entry.comparingByValue()).getValue();
         return Double.toString(maxValueDouble);
     }
     public String maxValueString(String baseString, String addString, String target, String replacement){

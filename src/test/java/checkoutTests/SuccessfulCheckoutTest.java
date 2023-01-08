@@ -3,6 +3,7 @@ package checkoutTests;
 import methods.CheckoutInformationMethods;
 import org.testng.annotations.Test;
 import pages.CheckoutCompletePage;
+import pages.CheckoutInformationPage;
 import pages.OverviewPage;
 
 public class SuccessfulCheckoutTest extends BaseCheckoutTest{
@@ -10,9 +11,9 @@ public class SuccessfulCheckoutTest extends BaseCheckoutTest{
     public void performShoppingCheckout() {
         CheckoutInformationMethods checkoutInformationMethods = new CheckoutInformationMethods(driver);
         checkoutInformationMethods.performFillingInfo(
-                checkoutInformationMethods.validFirstName,
-                checkoutInformationMethods.validLastName,
-                checkoutInformationMethods.validZipCode);
+                CheckoutInformationPage.validFirstName,
+                CheckoutInformationPage.validLastName,
+                CheckoutInformationPage.validZipCode);
         OverviewPage overviewPage = new OverviewPage(driver);
         overviewPage.isFinishButtonPresent();
         overviewPage.finishShopping();

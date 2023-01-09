@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import utilities.HelperClass;
 
 public class ShopPage extends BasePage{
     public ShopPage(WebDriver driver) {
@@ -41,20 +42,20 @@ public class ShopPage extends BasePage{
 
 
     public String minNameString(){
-        return minKeyString(inventoryProductNameBy, dollarSignBy);
+        return HelperClass.minKeyString(inventoryProductNameBy, dollarSignBy);
     }
     public By minNameElement(){
-        return minKeyElement(minNameString(), "add-to-cart-", " ", "-");
+        return HelperClass.minKeyElement(minNameString(), "add-to-cart-", " ", "-");
     }
     public void clickMin(){
         clickElement(minNameElement());
     }
 
     public String maxNameString(){
-        return maxKeyString(inventoryProductNameBy, dollarSignBy);
+        return HelperClass.maxKeyString(inventoryProductNameBy, dollarSignBy);
     }
     public By maxNameElement(){
-        return maxKeyElement(maxNameString(), "add-to-cart-", " ", "-");
+        return HelperClass.maxKeyElement(maxNameString(), "add-to-cart-", " ", "-");
     }
     public void clickMax() {
         clickElement(maxNameElement());
@@ -62,17 +63,17 @@ public class ShopPage extends BasePage{
 
 
     public String minPriceDoubleToString(){
-        return minValueDoubleToString(inventoryProductNameBy, dollarSignBy);
+        return HelperClass.minValueDoubleToString(inventoryProductNameBy, dollarSignBy);
     }
     public String minPrice(){
-        return minValueString(minPriceDoubleToString(), "$", "", "");
+        return HelperClass.minValueString(minPriceDoubleToString(), "$", "", "");
     }
 
     public String maxPriceDoubleToString(){
-        return maxValueDoubleToString(inventoryProductNameBy, dollarSignBy);
+        return HelperClass.maxValueDoubleToString(inventoryProductNameBy, dollarSignBy);
     }
     public String maxPrice(){
-        return maxValueString(maxPriceDoubleToString(), "$", "", "");
+        return HelperClass.maxValueString(maxPriceDoubleToString(), "$", "", "");
     }
 
 }

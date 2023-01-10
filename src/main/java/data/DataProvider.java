@@ -1,10 +1,21 @@
 package data;
 
-import methods.CheckoutInformationMethods;
 import pages.CheckoutInformationPage;
 import pages.LoginPage;
 
+/**
+ * DataProvider is a class that provides data for TestNG test classes. It contains two data providers, one for
+ * "failedLogin" and another for "failedCheckout". The data provider methods returns a 2D array of objects,
+ * where each sub-array represents a set of test data.
+ */
+
 public class DataProvider {
+    /**
+     * Data provider method that returns test data for failed login tests. The test data includes invalid usernames,
+     * invalid passwords, and the expected error messages to be displayed upon login failure.
+     *
+     * @return 2D array of objects, where each sub-array represents a set of test data (username, password, expected error message)
+     */
     @org.testng.annotations.DataProvider(name = "failedLogin")
     public static Object[][] failedLoginData(){
         return new Object[][] {
@@ -17,6 +28,7 @@ public class DataProvider {
         };
     }
 
+    //TODO when you finish proper data randomizer fill this javadoc
     @org.testng.annotations.DataProvider(name = "failedCheckout")
     public static Object[][] failedCheckoutData(){
         return new Object[][]{

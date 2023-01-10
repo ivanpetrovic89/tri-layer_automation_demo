@@ -1,0 +1,8 @@
+checkoutTests
+common
+data
+loginTests
+methods
+pages
+testsWithLoggedInUser
+utilities

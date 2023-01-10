@@ -4,9 +4,13 @@ import pages.CheckoutInformationPage;
 import pages.LoginPage;
 
 /**
- * DataProvider is a class that provides data for TestNG test classes. It contains two data providers, one for
- * "failedLogin" and another for "failedCheckout". The data provider methods returns a 2D array of objects,
- * where each sub-array represents a set of test data.
+ * DataProvider is a class that provides data for TestNG test classes.
+ * <p>
+ *    It contains two data providers, one for "failedLogin" and another for "failedCheckout".
+ *    The data provider methods returns a 2D array of objects,
+ *    where each sub-array represents a set of test data.
+ * </p>
+
  */
 
 public class DataProvider {

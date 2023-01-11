@@ -6,7 +6,20 @@ import pages.CheckoutCompletePage;
 import pages.CheckoutInformationPage;
 import pages.OverviewPage;
 
+/**
+ * SuccessfulCheckoutTest is a test class that completes shopping process.
+ * <p>
+ * This test class extends the {@link BaseCheckoutTest} class which sets up the browser
+ * and navigates to the checkout page.
+ */
+
 public class SuccessfulCheckoutTest extends BaseCheckoutTest{
+    /**
+     * Completes a shopping procedure.
+     * It fills in the necessary information on the checkout information page,
+     * clicks the finish button on the overview page,
+     * and verifies that the "back home" button is present on the checkout complete page.
+     */
     @Test(testName = "Successful shopping procedure.")
     public void performShoppingCheckout() {
         CheckoutInformationMethods checkoutInformationMethods = new CheckoutInformationMethods(driver);
@@ -20,4 +33,5 @@ public class SuccessfulCheckoutTest extends BaseCheckoutTest{
         CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
         checkoutCompletePage.isBackHomeButtonPresent();
     }
+
 }

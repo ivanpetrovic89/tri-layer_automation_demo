@@ -10,7 +10,18 @@ import org.testng.annotations.Parameters;
 import pages.BasePage;
 import pages.LoginPage;
 
+/**
+ * BaseCheckoutTest is a test class that contains the setup and tear down methods for the checkout tests.
+ * <p>
+ * It extends {@link Browsers} class.
+ */
+
 public class BaseCheckoutTest extends Browsers {
+    /** The setup method runs before each test method and initializes the browser specified in the testng.xml file.
+     * It navigates to the website's home page, logs in, adds an item to the cart, and navigates to the checkout page.
+     *
+     * @param  browser  the browser to be used for the test
+    */
     @Parameters({"browser"})
     @BeforeMethod
     public void setup(String browser){
@@ -30,6 +41,9 @@ public class BaseCheckoutTest extends Browsers {
         shoppingCartMethods.goToCheckout();
     }
 
+    /**
+     * Runs after each test method and quits the browser.
+     */
     @AfterMethod
     public void tearDown(){
         driver.quit();

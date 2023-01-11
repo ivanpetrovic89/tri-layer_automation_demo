@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import utilities.PropertyManager;
 
 /**
- * This class represents a login page in a web application, providing methods for interacting with elements on the page.
+ * This class represents a login page on a site under test, providing methods for interacting with elements on the page.
  * It extends the BasePage class, which provides common methods for interacting with elements on a web page.
  */
 

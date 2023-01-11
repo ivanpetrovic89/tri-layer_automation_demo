@@ -16,13 +16,11 @@ import pages.BasePage;
 public class BaseTest extends Browsers {
 
     /**
-     * The setup method is annotated with {@code @BeforeMethod} and {@code @Parameters("browser")}.
-     * This method is run before each test. It gets the specified browser from the testng.xml file and
-     * initializes the WebDriver instance accordingly.
-     * Also, it navigates to the website's URL.
+     * Runs before each test. It gets the specified browser from the testng.xml file and
+     * initializes the WebDriver instance accordingly. It navigates to the website's URL.
      *
      * @param browser The name of the browser to be used for the test, as specified in the various testng.xml files
-     *                located in the 'suites' folder.
+     *                located in the 'suites' package.
      */
     @Parameters({"browser"})
     @BeforeMethod
@@ -37,8 +35,7 @@ public class BaseTest extends Browsers {
     }
 
     /**
-     * The tearDown method is annotated with {@code @AfterMethod}.
-     * This method is run after each test, and it's responsible for closing the browser.
+     * Runs after each test, and it's responsible for closing the browser.
      */
     @AfterMethod
     public void tearDown(){

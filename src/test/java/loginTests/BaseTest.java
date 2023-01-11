@@ -8,6 +8,7 @@ import pages.BasePage;
 
 /**
  * The BaseTest class contains the basic setup and tear-down methods that are run before and after each test.
+ * <p>
  * It is responsible for initializing the WebDriver instance based on the browser specified in the testng.xml file
  * and navigating to the website's URL.
  * It extends {@link Browsers} class.

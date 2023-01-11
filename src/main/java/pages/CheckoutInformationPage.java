@@ -12,9 +12,12 @@ public class CheckoutInformationPage extends BasePage{
     public By lastNameFieldBy = By.id("last-name");
     public By zipCodeFiledBy = By.id("postal-code");
     public By continueButtonBy = By.id("continue");
+
+    //TODO popravi naredne 3 linije ovo za sledeci cas
     public static String validFirstName = PropertyManager.getValidFirstName();
     public static String validLastName = PropertyManager.getValidLastName();
     public static String validZipCode = PropertyManager.getValidZipCode();
+
     public By errorCheckoutMessageBy = By.xpath("//div[@class='error-message-container error']");
 
     public void fillFirstName(String firstName){

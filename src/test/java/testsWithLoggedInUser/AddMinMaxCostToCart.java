@@ -14,6 +14,10 @@ import org.testng.annotations.Test;
  */
 
 public class AddMinMaxCostToCart extends BaseLoggedInTest{
+    /**
+     * The addMinMaxToCart method adds items with highest and lowest price to the cart,
+     * and then it checks if the items are added properly.
+     */
     @Test(testName = "Adding minimum and maximum price item to cart")
     public void addMinMaxToCart() {
         ShopMethods shopMethods = new ShopMethods(driver);

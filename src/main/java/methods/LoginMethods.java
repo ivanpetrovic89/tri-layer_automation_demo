@@ -3,6 +3,11 @@ package methods;
 import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
 
+/**
+ * LoginMethods class is for methods used to perform activities on the login page of the web application under test.
+ * It extends {@link LoginPage}.
+ */
+
 public class LoginMethods extends LoginPage {
     public LoginMethods(WebDriver driver) {
         super(driver);

@@ -3,6 +3,7 @@
 <suite name="Single test">
     <listeners>
         <listener class-name="listeners.AnnotationTransformer"/>
+        <listener class-name="listeners.ScreenshotListener"/>
     </listeners>
     <test name="Active in the making">
         <parameter name="browser" value="chrome"/>

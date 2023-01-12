@@ -1,6 +1,8 @@
 package loginTests;
 
 import common.Browsers;
+import common.Interface;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -11,11 +13,10 @@ import pages.BasePage;
  * <p>
  * It is responsible for initializing the WebDriver instance based on the browser specified in the testng.xml file
  * and navigating to the website's URL.
- * It extends {@link Browsers} class.
+ * It extends {@link Browsers} class and it implements {@link Interface}.
  */
 
-public class BaseTest extends Browsers {
-
+public class BaseTest extends Browsers implements Interface {
     /**
      * Runs before each test. It gets the specified browser from the testng.xml file and
      * initializes the WebDriver instance accordingly. It navigates to the website's URL.
@@ -41,5 +42,14 @@ public class BaseTest extends Browsers {
     @AfterMethod
     public void tearDown(){
         driver.quit();
+    }
+
+    /**
+     * Gets driver that's used in interface for screenshot listener.
+     *
+     * @return WebDriver driver
+     */
+    public WebDriver getDriver(){
+        return driver;
     }
 }

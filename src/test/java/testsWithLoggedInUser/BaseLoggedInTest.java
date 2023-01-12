@@ -1,7 +1,9 @@
 package testsWithLoggedInUser;
 
 import common.Browsers;
+import common.Interface;
 import methods.LoginMethods;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -11,7 +13,7 @@ import pages.LoginPage;
 /**
  * Base class for tests that require a logged-in user.
  *<p>
- * This class extends the {@link Browsers} class, which provides methods for opening specific browsers.
+ * This class extends the {@link Browsers} class and implements {@link Interface}.
  * The {@link #setup(String)} method is annotated with
  * {@link org.testng.annotations.BeforeMethod @BeforeMethod}, and is run before
  * each test method. It takes a single parameter, "browser", which determines which
@@ -21,7 +23,7 @@ import pages.LoginPage;
  *</p>
  */
 
-public class BaseLoggedInTest extends Browsers {
+public class BaseLoggedInTest extends Browsers implements Interface {
     /**
      * Runs before each test. It gets the specified browser from the testng.xml file and
      * initializes the WebDriver instance accordingly. It navigates to the website's URL.
@@ -50,5 +52,14 @@ public class BaseLoggedInTest extends Browsers {
     @AfterMethod
     public void tearDown(){
         driver.quit();
+    }
+
+    /**
+     * Gets driver that's used in interface for screenshot listener.
+     *
+     * @return WebDriver driver
+     */
+    public WebDriver getDriver(){
+        return driver;
     }
 }

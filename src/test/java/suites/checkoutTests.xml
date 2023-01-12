@@ -3,6 +3,7 @@
 <suite name="Login functionality suite">
     <listeners>
         <listener class-name="listeners.AnnotationTransformer"/>
+        <listener class-name="listeners.ScreenshotListener"/>
     </listeners>
     <test name="Positive and negative checkout tests">
         <parameter name="browser" value="chrome"/>

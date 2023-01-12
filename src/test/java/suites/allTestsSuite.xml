@@ -3,6 +3,7 @@
 <suite name="Regression">
     <listeners>
         <listener class-name="listeners.AnnotationTransformer"/>
+        <listener class-name="listeners.ScreenshotListener"/>
     </listeners>
     <parameter name="browser" value="chrome"/>
     <suite-files>

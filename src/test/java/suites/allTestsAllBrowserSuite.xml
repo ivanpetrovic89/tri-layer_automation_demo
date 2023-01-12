@@ -3,6 +3,7 @@
 <suite name="Regression">
     <listeners>
         <listener class-name="listeners.AnnotationTransformer"/>
+        <listener class-name="listeners.ScreenshotListener"/>
     </listeners>
 
     <test name="Chrome Tests">

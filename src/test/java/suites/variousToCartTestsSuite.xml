@@ -3,6 +3,7 @@
 <suite name="Adding Items to Cart functionality suite">
     <listeners>
         <listener class-name="listeners.AnnotationTransformer"/>
+        <listener class-name="listeners.ScreenshotListener"/>
     </listeners>
     <test name="Various Add to Cart Default">
         <parameter name="browser" value="default"/>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Login functionality suite">
+    <listeners>
+        <listener class-name="listeners.AnnotationTransformer"/>
+    </listeners>
     <test name="Positive and negative checkout tests">
         <parameter name="browser" value="chrome"/>
         <classes>

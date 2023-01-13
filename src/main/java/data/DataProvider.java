@@ -1,6 +1,5 @@
 package data;
 
-import pages.CheckoutInformationPage;
 import pages.LoginPage;
 
 /**
@@ -32,15 +31,13 @@ public class DataProvider {
         };
     }
 
-    //TODO when you finish proper data randomizer fill this javadoc
     @org.testng.annotations.DataProvider(name = "failedCheckout")
     public static Object[][] failedCheckoutData(){
         return new Object[][]{
                 {"", "", "", "Error: First Name is required"},
-                {"", CheckoutInformationPage.validLastName, CheckoutInformationPage.validZipCode, "Error: First Name is required"},
-                {CheckoutInformationPage.validFirstName, "", CheckoutInformationPage.validZipCode, "Error: Last Name is required"},
-                {CheckoutInformationPage.validFirstName, CheckoutInformationPage.validLastName, "", "Error: Postal Code is required"}
-
+                {"", DataCreator.lastName, DataCreator.zipCode, "Error: First Name is required"},
+                {DataCreator.firstName, "", DataCreator.zipCode, "Error: Last Name is required"},
+                {DataCreator.firstName, DataCreator.lastName, "", "Error: Postal Code is required"}
         };
     }
 }

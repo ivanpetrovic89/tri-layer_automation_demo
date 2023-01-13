@@ -20,8 +20,7 @@ public class PropertyManager {
     /**
      * String variable called from 'configuration.properties' file located in 'resources' folder.
      */
-    private static String url, validUsername, validPassword, invalidUsername, invalidPassword, expectedMaxPrice, expectedMinPrice,
-    validFirstName, validLastName, validZipCode;
+    private static String url, validUsername, validPassword, invalidUsername, invalidPassword, expectedMaxPrice, expectedMinPrice;
 
     /**
      * This method returns an instance of the PropertyManager class, creating a new instance if one does not already exist.
@@ -59,9 +58,6 @@ public class PropertyManager {
         invalidPassword = properties.getProperty("invalidPassword");
         expectedMaxPrice = properties.getProperty("expectedMaxPrice");
         expectedMinPrice = properties.getProperty("expectedMinPrice");
-        validFirstName = properties.getProperty("validFirstName");
-        validLastName = properties.getProperty("validLastName");
-        validZipCode = properties.getProperty("validZipCode");
     }
 
 
@@ -128,18 +124,4 @@ public class PropertyManager {
         return expectedMinPrice;
     }
 
-    //TODO when you finish proper data randomizer fill this javadoc
-    public static String getValidFirstName() {
-        return validFirstName;
-    }
-
-    //TODO when you finish proper data randomizer fill this javadoc
-    public static String getValidLastName() {
-        return validLastName;
-    }
-
-    //TODO when you finish proper data randomizer fill this javadoc
-    public static String getValidZipCode() {
-        return validZipCode;
-    }
 }

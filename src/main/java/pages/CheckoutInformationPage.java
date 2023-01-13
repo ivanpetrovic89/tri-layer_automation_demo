@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import utilities.PropertyManager;
 
 /**
  * CheckoutInformationPage class contains all individual variables and methods used for different actions
@@ -40,11 +39,6 @@ public class CheckoutInformationPage extends BasePage{
      * By variable used to locate 'Continue' button on the checkout information page.
      */
     public By continueButtonBy = By.id("continue");
-
-    //TODO popravi naredne 3 linije ovo za sledeci cas
-    public static String validFirstName = PropertyManager.getValidFirstName();
-    public static String validLastName = PropertyManager.getValidLastName();
-    public static String validZipCode = PropertyManager.getValidZipCode();
 
     /**
      * By variable used to locate checkout error message.

@@ -3,8 +3,8 @@ package checkoutTests;
 import methods.CheckoutInformationMethods;
 import org.testng.annotations.Test;
 import pages.CheckoutCompletePage;
-import pages.CheckoutInformationPage;
 import pages.OverviewPage;
+import data.DataCreator;
 
 /**
  * SuccessfulCheckoutTest is a test class that completes shopping process.
@@ -24,9 +24,9 @@ public class SuccessfulCheckoutTest extends BaseCheckoutTest{
     public void performShoppingCheckout() {
         CheckoutInformationMethods checkoutInformationMethods = new CheckoutInformationMethods(driver);
         checkoutInformationMethods.performFillingInfo(
-                CheckoutInformationPage.validFirstName,
-                CheckoutInformationPage.validLastName,
-                CheckoutInformationPage.validZipCode);
+                DataCreator.firstName,
+                DataCreator.lastName,
+                DataCreator.zipCode);
         OverviewPage overviewPage = new OverviewPage(driver);
         overviewPage.isFinishButtonPresent();
         overviewPage.finishShopping();

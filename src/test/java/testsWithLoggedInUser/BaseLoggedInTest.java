@@ -6,6 +6,7 @@ import methods.LoginMethods;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import pages.BasePage;
 import pages.LoginPage;
@@ -34,7 +35,7 @@ public class BaseLoggedInTest extends Browsers implements Interface {
      */
     @Parameters({"browser"})
     @BeforeMethod
-    public void setup(String browser){
+    public void setup(@Optional("chrome") String browser){
         switch (browser.toLowerCase()) {
             case "chrome" -> startChrome();
             case "firefox" -> startFirefox();

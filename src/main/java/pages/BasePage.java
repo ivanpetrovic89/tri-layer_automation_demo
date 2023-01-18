@@ -129,7 +129,7 @@ public class BasePage {
         List<WebElement> webElementList = driver.findElements(elementBy);
         Random random = new Random();
         int size = webElementList.size();
-        int selection = random.nextInt(size-1);
+        int selection = random.nextInt(size);
         return webElementList.get(selection);
     }
 

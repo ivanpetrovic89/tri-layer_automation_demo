@@ -1,6 +1,6 @@
 package listeners;
 
-import common.Interface;
+import common.DriverInterface;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -27,7 +27,7 @@ public class ScreenshotListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult testResult){
         try{
-            Interface currentClass = (Interface) testResult.getInstance();
+            DriverInterface currentClass = (DriverInterface) testResult.getInstance();
             WebDriver driver = currentClass.getDriver();
             takeScreenshot(driver, testResult);
         }catch (Exception e){

@@ -3,10 +3,10 @@ package common;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Interface is an interface that defines a method to get the web driver.
+ * DriverInterface is an interface that defines a method to get the web driver.
  */
 
-public interface Interface {
+public interface DriverInterface {
     /**
      * Get the web driver used to interact with the web page.
      *

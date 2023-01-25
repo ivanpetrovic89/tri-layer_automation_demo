@@ -1,7 +1,7 @@
 package checkoutTests;
 
 import common.Browsers;
-import common.Interface;
+import common.DriverInterface;
 import methods.LoginMethods;
 import methods.ShopMethods;
 import methods.ShoppingCartMethods;
@@ -16,10 +16,10 @@ import pages.LoginPage;
 /**
  * BaseCheckoutTest is a test class that contains the setup and tear down methods for the checkout tests.
  * <p>
- * It extends {@link Browsers} class and it implements {@link Interface}.
+ * It extends {@link Browsers} class and it implements {@link DriverInterface}.
  */
 
-public class BaseCheckoutTest extends Browsers implements Interface {
+public class BaseCheckoutTest extends Browsers implements DriverInterface {
     /** The setup method runs before each test method and initializes the browser specified in the testng.xml file.
      * It navigates to the website's home page, logs in, adds an item to the cart, and navigates to the checkout page.
      *

@@ -1,7 +1,7 @@
 package loginTests;
 
 import common.Browsers;
-import common.Interface;
+import common.DriverInterface;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -14,10 +14,10 @@ import pages.BasePage;
  * <p>
  * It is responsible for initializing the WebDriver instance based on the browser specified in the testng.xml file
  * and navigating to the website's URL.
- * It extends {@link Browsers} class and it implements {@link Interface}.
+ * It extends {@link Browsers} class and it implements {@link DriverInterface}.
  */
 
-public class BaseTest extends Browsers implements Interface {
+public class BaseTest extends Browsers implements DriverInterface {
     /**
      * Runs before each test. It gets the specified browser from the testng.xml file and
      * initializes the WebDriver instance accordingly. It navigates to the website's URL.

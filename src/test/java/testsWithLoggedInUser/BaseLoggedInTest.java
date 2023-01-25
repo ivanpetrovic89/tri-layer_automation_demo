@@ -1,7 +1,7 @@
 package testsWithLoggedInUser;
 
 import common.Browsers;
-import common.Interface;
+import common.DriverInterface;
 import methods.LoginMethods;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -14,7 +14,7 @@ import pages.LoginPage;
 /**
  * Base class for tests that require a logged-in user.
  *<p>
- * This class extends the {@link Browsers} class and implements {@link Interface}.
+ * This class extends the {@link Browsers} class and implements {@link DriverInterface}.
  * The {@link #setup(String)} method is annotated with
  * {@link org.testng.annotations.BeforeMethod @BeforeMethod}, and is run before
  * each test method. It takes a single parameter, "browser", which determines which
@@ -24,7 +24,7 @@ import pages.LoginPage;
  *</p>
  */
 
-public class BaseLoggedInTest extends Browsers implements Interface {
+public class BaseLoggedInTest extends Browsers implements DriverInterface {
     /**
      * Runs before each test. It gets the specified browser from the testng.xml file and
      * initializes the WebDriver instance accordingly. It navigates to the website's URL.

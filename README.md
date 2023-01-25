@@ -13,7 +13,7 @@ In these classes, there are also all relevant assertion methods that are used to
 - Third layer represents the test executions. It consists of classes that use TestNG for performing individual tests. All tests call the complex action methods from the 
 second layer, Methods, and also check if the tests are run properly with relevant assertion methods. You can find all Tests in src/test/java.
 
-By layering, the tester can achive very high reusability and maintainability level of his tests and be ready for new challenges of the project.
+By layering, the tester can achieve very high reusability and maintainability level of his tests and be ready for new challenges of the project.
 
 ## Test execution
 There are currently 9 complete test cases in the demo. Two of them - FailedLoginTest and FailedCheckoutTest are data driven with all the wrong combination of
